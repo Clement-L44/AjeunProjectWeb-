@@ -2,7 +2,7 @@ import React from 'react'
 import LastTech from './LastTech/LastTech'
 import ActusTech from './ActusTech/ActusTech'
 import SondageTech from './SondageTech/SondageTech'
-//import TestTech from './TestTech/TestTech' 
+import TopTech from './TopTech/TopTech'
 
 
 class AccueilTech extends React.Component {
@@ -25,7 +25,7 @@ class AccueilTech extends React.Component {
                     <SondageTech></SondageTech>
                 </div>
                 <div>
-                    
+                    <TopTech></TopTech>
                 </div>
             </div>
 
