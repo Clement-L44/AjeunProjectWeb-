@@ -15,7 +15,7 @@ class PodiumActus extends React.Component {
 
     async componentDidMount () {
 
-        const urlPodiumActus = "http://127.0.0.1:8000/api/articles?order[Aime]=desc&order[date]=desc&itemPerPage=3"
+        const urlPodiumActus = "http://127.0.0.1:8000/api/articles?order[Aime]=desc&itemPerPage=3"
         const responsePodiumActus = await fetch(urlPodiumActus);
         const dataPodiumActus = await responsePodiumActus.json();
         this.setState({ actus : dataPodiumActus['hydra:member'], loading: false});
