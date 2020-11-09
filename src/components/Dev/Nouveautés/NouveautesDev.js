@@ -32,7 +32,7 @@ class NouveautesDev extends React.Component {
 
         return(
             <div>
-                <h1>Nouveautés</h1>
+                <a href="/nouveautés"><h1>Nouveautés</h1></a>
                 {this.state.articles.map((item) => {return (<li key= {item.id}>{item.titre} - {item.id} - {item.date} - {(item.categorie).map((cat) => cat.libelle)}</li>)})}   
             </div>
 

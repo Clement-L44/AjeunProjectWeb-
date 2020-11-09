@@ -9,6 +9,7 @@ import App from './App';
 import Accueil from './components/Accueil/Accueil';
 import AccueilTech from './components/AccueilTech/AccueilTech';
 import AccueilDev from './components/Dev/AccueilDev';
+import Nouveautes from './components/Dev/Nouveautés/Nouveautes';
 
 
 
@@ -20,6 +21,8 @@ const routing = (
           <Route exact path= "/accueil" component= {Accueil}></Route>
           <Route exact path= "/tech" component= {AccueilTech}></Route>
           <Route exact path="/dev" component={AccueilDev}></Route>
+          <Route exact path="/interview" component={AccueilDev}></Route>
+          <Route exact path="/nouveautés" component= {Nouveautes}></Route>
       </div>
   </Router>
 
