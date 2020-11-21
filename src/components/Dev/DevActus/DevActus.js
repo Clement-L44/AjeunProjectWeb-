@@ -14,7 +14,7 @@ class DevActus extends React.Component {
 
     async componentDidMount() {
 
-        const urlDevActus = "http://127.0.0.1:8000/api/articles?order[date]=desc&categorie=/api/categories/13"
+        const urlDevActus = "http://127.0.0.1:8000/api/articles?order[date]=desc&categorie=/api/categories/18"
         const responseDevActus = await fetch(urlDevActus);
         const dataDevActus = await responseDevActus.json();
         this.setState({ articles : dataDevActus['hydra:member'], loading: false});

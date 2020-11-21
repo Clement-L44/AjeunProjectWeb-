@@ -14,7 +14,7 @@ class TopTech extends React.Component {
 
     async componentDidMount() {
 
-        const urlTopTech= "http://127.0.0.1:8000/api/articles?order[Aime]=desc&categorie=/api/categories/11&itemPerPage=3"
+        const urlTopTech= "http://127.0.0.1:8000/api/articles?order[Aime]=desc&categorie=/api/categories/17&itemPerPage=3"
         const responseTopTech = await fetch(urlTopTech);
         const dataTopTech = await responseTopTech.json();
         this.setState({ articles : dataTopTech['hydra:member'], loading: false});

@@ -1,8 +1,10 @@
 import React from 'react'
-import LastTech from './LastTech/LastTech'
-import ActusTech from './ActusTech/ActusTech'
-import SondageTech from './SondageTech/SondageTech'
-import TopTech from './TopTech/TopTech'
+import Header from '../components/Header/header'
+import Footer from '../components/Footer/footer'
+import LastTech from '../components/AccueilTech/LastTech/LastTech'
+import ActusTech from '../components/AccueilTech/ActusTech/ActusTech'
+import SondageTech from '../components/AccueilTech/SondageTech/SondageTech'
+import TopTech from '../components/AccueilTech/TopTech/TopTech'
 
 
 class AccueilTech extends React.Component {

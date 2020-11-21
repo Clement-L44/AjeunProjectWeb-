@@ -1,7 +1,7 @@
 import React from 'react'
-import ActusAccueil from './Actus/ActusAccueil'
-import PodiumActus from './PodiumActus/PodiumActus'
-import TopSondages from './TopSondages/TopSondages'
+import ActusAccueil from '../components/Accueil/Actus/ActusAccueil'
+import PodiumActus from '../components/Accueil/PodiumActus/PodiumActus'
+import TopSondages from '../components/Accueil/TopSondages/TopSondages'
 
 
 

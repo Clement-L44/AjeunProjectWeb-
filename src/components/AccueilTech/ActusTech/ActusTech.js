@@ -14,7 +14,7 @@ class ActusTech extends React.Component {
 
     async componentDidMount() {
 
-        const urlActusTech = "http://127.0.0.1:8000/api/articles?order[date]=desc&categorie=/api/categories/11"
+        const urlActusTech = "http://127.0.0.1:8000/api/articles?order[date]=desc&categorie=/api/categories/17"
         const responseActusTech = await fetch(urlActusTech);
         const dataActusTech = await responseActusTech.json();
         this.setState({ articles : dataActusTech['hydra:member'], loading: false});

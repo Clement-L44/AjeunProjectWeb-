@@ -1,9 +1,10 @@
 import React from 'react'
-
-import DevActus from './DevActus/DevActus'
-import NouveautesDev from './Nouveautés/NouveautesDev'
-import TopDev from './TopDev/TopDev'
-import SondageDev from './Sondages/SondagesDev'
+import Header from '../components/Header/header'
+import Footer from '../components/Footer/footer'
+import DevActus from '../components/Dev/DevActus/DevActus'
+import NouveautesDev from '../components/Dev/Nouveautés/NouveautesDev'
+import TopDev from '../components/Dev/TopDev/TopDev'
+import SondageDev from '../components/Dev/Sondages/SondagesDev'
 
 
 class AccueilDev extends React.Component {
@@ -15,7 +16,7 @@ class AccueilDev extends React.Component {
     render(){
         return(
             <div>
-                <h1>Acceuil Dev</h1>
+                <h1>Accueil Dev</h1>
                 <div>
                    <NouveautesDev></NouveautesDev>
                 </div>
@@ -29,7 +30,6 @@ class AccueilDev extends React.Component {
                     <SondageDev></SondageDev>
                 </div>
             </div>
-
         )
     }
 

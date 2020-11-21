@@ -14,7 +14,7 @@ class NouveautesDev extends React.Component {
 
     async componentDidMount() {
 
-        const urlNouveautesDev = "http://127.0.0.1:8000/api/articles?order[date]=desc&categorie=/api/categories/13&itemPerPage=3"
+        const urlNouveautesDev = "http://127.0.0.1:8000/api/articles?order[date]=desc&categorie=/api/categories/18&itemPerPage=3"
         const responseNouveautesDev = await fetch(urlNouveautesDev);
         const dataNouveautesDev = await responseNouveautesDev.json();
         this.setState({ articles : dataNouveautesDev['hydra:member'], loading: false});

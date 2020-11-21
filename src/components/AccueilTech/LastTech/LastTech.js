@@ -14,7 +14,7 @@ class LastTech extends React.Component {
 
     async componentDidMount() {
 
-        const urlLastTech = "http://127.0.0.1:8000/api/articles?order[date]=desc&categorie=/api/categories/11&itemPerPage=3"
+        const urlLastTech = "http://127.0.0.1:8000/api/articles?order[date]=desc&categorie=/api/categories/17&itemPerPage=3"
         const responseLastTech = await fetch(urlLastTech);
         const dataLastTech = await responseLastTech.json();
         this.setState({ articles : dataLastTech['hydra:member'], loading: false});

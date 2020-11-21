@@ -14,7 +14,7 @@ class SondageTech extends React.Component {
 
     async componentDidMount() {
 
-        const urlSondageTech = "http://127.0.0.1:8000/api/sondages?order[nbr_votes]=desc&article.categorie=/api/categories/11&itemPerPage=3"
+        const urlSondageTech = "http://127.0.0.1:8000/api/sondages?order[nbr_votes]=desc&article.categorie=/api/categories/17&itemPerPage=3"
         const responseSondageTech = await fetch(urlSondageTech);
         const dataSondageTech = await responseSondageTech.json();
         this.setState({ sondages : dataSondageTech['hydra:member'], loading: false});
