@@ -1,11 +1,11 @@
 import React from 'react'
-
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
 
 class AdminAccueil extends React.Component {
 
     constructor(props){
-        super(props);
-     
+        super(props);  
         this.state = {
             articles: null,
             LastArticles: null,
@@ -36,9 +36,6 @@ class AdminAccueil extends React.Component {
             let ArticleLike = this.state.articles[i].Aime;
             this.setState({ likes : this.state.likes+ArticleLike , loading : false});
         }
-        
-
-
     }
 
     render(){
@@ -52,13 +49,9 @@ class AdminAccueil extends React.Component {
 
         return(
             <div>
+                <CardContent>
                 <div>
-                    <a><h3>Créer un Contenu</h3></a>
-                    <a><h3>Historique</h3></a>
-                    <a><h3>Mon Compte</h3></a>
-                </div>
-                <div>
-                    <h1>Derniers Contenus</h1>
+                   <h1>Derniers Contenus</h1>
                     {this.state.LastArticles.map((item) => {return (<li key= {item.id}>{item.titre} - {item.id} - {item.date} - {item.conclusion} - {(item.categorie).map((cat) => cat.libelle)}</li>)})}
                 </div>
                 <div>
@@ -69,6 +62,7 @@ class AdminAccueil extends React.Component {
                     <h1>Likes</h1>
                     <h3>{this.state.likes}</h3>
                 </div>
+                </CardContent>
             </div>
 
         )

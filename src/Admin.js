@@ -3,13 +3,15 @@ import { Redirect, Route } from "react-router-dom";
 import { HydraAdmin, fetchHydra as baseFetchHydra, hydraDataProvider as baseHydraDataProvider } from "@api-platform/admin";
 import parseHydraDocumentation from "@api-platform/api-doc-parser/lib/hydra/parseHydraDocumentation";
 import authProvider from './services/authProvider';
-import ArticlesList from './Admin/List/ArticleList';
+import ArticlesList from './components/Admin/List/ArticleList';
 import ResourceGuesser from "@api-platform/admin/lib/ResourceGuesser";
-import SondagesList from "./Admin/List/SondagesList";
-import ImageList from "./Admin/List/ImageList";
-import TypeList from "./Admin/List/TypeList";
-import CategorieList from "./Admin/List/CategorieList";
-import UserList from "./Admin/List/UserList";
+import SondagesList from "./components/Admin/List/SondagesList";
+import ImageList from "./components/Admin/List/ImageList";
+import TypeList from "./components/Admin/List/TypeList";
+import CategorieList from "./components/Admin/List/CategorieList";
+import UserList from "./components/Admin/List/UserList";
+import Dashboard from "./components/Admin/DashBoard/Dashboard";
+import NotFound from "./components/Admin/NotFound";
 
 const entrypoint = "http://127.0.0.1:8000/api";
 
@@ -57,7 +59,7 @@ const httpClient = (url, options = {}) => {
 }
 
 export default () => (
-  <HydraAdmin  authProvider={authProvider} dataProvider= { dataProvider } entrypoint = { entrypoint }>
+  <HydraAdmin catchAll={NotFound} dashboard={Dashboard} authProvider={authProvider} dataProvider= { dataProvider } entrypoint = { entrypoint }>
       <ResourceGuesser name="articles" list={ArticlesList}></ResourceGuesser>
       <ResourceGuesser name="sondages" list={SondagesList}></ResourceGuesser>   
       <ResourceGuesser name="images" list={ImageList}></ResourceGuesser>
