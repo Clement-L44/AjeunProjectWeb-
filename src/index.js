@@ -5,7 +5,6 @@ import './index.css';
 import {Route, Link, BrowserRouter as Router } from 'react-router-dom'
 
 /*Components*/
-import App from './App';
 import Accueil from './scenes/Accueil';
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer.js';
@@ -18,10 +17,11 @@ import TechActus from './components/AccueilTech/ActusTech/TechActus';
 import Actus from './components/Dev/DevActus/Actus';
 import CreerUnCompte from './components/Connexion/CreerUnCompte';
 import Admin from './Admin';
-const routing = (
+import Markdown from './components/Admin/Markdown/Markdown';
+import MonCompteAdmin from './components/Admin/MonCompte/MonCompteAdmin';
 
-  <Router>
-    
+const routing = (
+  <Router>   
       <div>
         <Header></Header>
           <Route exact path= "/" component= {Accueil}></Route>
@@ -32,8 +32,10 @@ const routing = (
           <Route exact path="/dev/actus" component={Actus}></Route>
           <Route exact path="/dev/interviews" component={Interviews}></Route>
           <Route exact path="/dev/projets" component={Projets}></Route>
-          <Route exact path="/admin" component={Admin}></Route>
+          <Route exact path="/admin/admin" component={Admin}></Route>
+          <Route exact path="/admin/monCompte" component={MonCompteAdmin}></Route>
           <Route exact path="/creerUnCompte" component={CreerUnCompte}></Route>
+          <Route exact path="/markdown" component={Markdown}></Route> 
          <Footer></Footer>  
       </div>
   </Router>
